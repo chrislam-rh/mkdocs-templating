@@ -1,2 +1,75 @@
 site_name: Tesco High Level Design Documentation
-...
+site_url: https://your-doc-site.example
+repo_url: https://github.enterprise.url/your-repo
+repo_name: your-repo
+
+theme:
+  name: material
+  language: en
+  custom_dir: docs/overrides
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  logo: images/tesco-logo.png
+  favicon: images/tesco-favicon.png
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/header.js
+
+nav:
+  - Home: README.md
+  - Management Design: management-design.md
+  - Storage HLD: Storage-HLD.md
+  - TKS:
+      - Design: tks-design.md
+      - Network Design: tks-network-design.md
+      - Observability: tks-observability.md
+      - RBAC Standards: tks-rbac-standards.md
+      - Service Naming Standards: tks-svc-naming-standards.md
+      - UAT: TKS-UAT.md
+  - TPC:
+      - Naming Standards: tpc-naming-standards.md
+  - VMaaS:
+      - HLD: VMaaS-HLD.md
+      - Network HLD: VMaaS-Network-HLD.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
