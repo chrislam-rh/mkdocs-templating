@@ -6,7 +6,7 @@ repo_name: your-repo
 theme:
   name: material
   language: en
-  # custom_dir: docs/overrides
+  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.sections

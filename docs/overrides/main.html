@@ -1,17 +1,30 @@
 {% extends "base.html" %}
 
+{% block header %}{{ super() }}{% endblock %}
+{% block site_nav %}{{ super() }}{% endblock %}
+
 {% block footer %}
   {{ super() }}
-  <footer class="md-footer">
-  <div class="md-footer__inner md-grid">
-    <div class="md-footer__content">
-      <p>
-        © {{ config.site_name }} — High Level Design Documentation
-      </p>
-    </div>
-  </div>
 
-  <!-- Tesco blue stripes motif -->
-  <div class="tesco-stripes"></div>
+  <footer class="md-footer md-footer--tesco">
+    <div class="md-footer__inner md-grid">
+      <div class="md-footer__content">
+        <p>© {{ config.site_name }} — High Level Design Documentation</p>
+        <nav class="md-footer__links">
+          <a href="{{ base_url }}/README/">Home</a>
+          <span>·</span>
+          <a href="{{ base_url }}/management-design/">Management</a>
+          <span>·</span>
+          <a href="{{ base_url }}/Storage-HLD/">Storage</a>
+          <span>·</span>
+          <a href="{{ base_url }}/tks-design/">TKS</a>
+          <span>·</span>
+          <a href="{{ base_url }}/VMaaS-HLD/">VMaaS</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Tesco blue stripes motif -->
+    <div class="tesco-stripes"></div>
   </footer>
 {% endblock %}
