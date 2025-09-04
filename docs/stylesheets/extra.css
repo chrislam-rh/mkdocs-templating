@@ -99,17 +99,24 @@
   border: 1px solid #ececec;
 }
 
-/* ===== Footer ===== */
-.md-footer {
+/* Footer styling */
+.md-footer--tesco {
   background: #ffffff;
   border-top: 8px solid var(--tesco-red);
   padding: 1rem 0;
   color: #333;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
-
-.md-footer__content {
+.md-footer--tesco .md-footer__content {
   text-align: center;
+}
+.md-footer__links a {
+  text-decoration: none;
+  color: var(--tesco-blue);
+  font-weight: 600;
+}
+.md-footer__links a:hover {
+  text-decoration: underline;
 }
 
 /* Tesco stripes motif */
